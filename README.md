@@ -1,6 +1,7 @@
 # Testing-Signup-Form
 
 This is a small project based on testing a signup form.
+This project is done using node.js framework mocha and chai assertion library to run test.
 The code files for the sign up form is located in the signup folder in the repo.
 The test files are located in the signup test folder in the repo.
 
@@ -24,3 +25,4 @@ which are used in the signup.js files to validate the form.
 ## Contributions
 If any contributions please feel free to add.
 You are also free to make changes to the source files
+
