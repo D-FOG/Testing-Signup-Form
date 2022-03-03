@@ -24,5 +24,5 @@ which are used in the signup.js files to validate the form.
 
 ## Contributions
 If any contributions please feel free to add.
-You are also free to make changes to the source files
+Cause I still think my code is not that ok yet. ☺️
 
