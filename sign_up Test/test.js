@@ -1,12 +1,14 @@
-const assert = require("chai").assert;
-const isLetter = require("./index.js").isLetter;
+const assert = require("chai").assert;   //import the chai library
+//import the functions
+const isLetter = require("./index.js").isLetter;        
 const isEmail = require("./index.js").isEmail;
 const isLength = require("./index.js").isLength;
 
+//write tests
 describe('isLetter', function(){
     it('checking if value is strings', function(){
         let result = isLetter();
-        assert.match(result, /^[a-zA-Z]+$/);
+        assert.match(result, /^[a-zA-Z]+$/); //the function "match", matches the value from the imorted function to a regular expression
     });
 });
 
