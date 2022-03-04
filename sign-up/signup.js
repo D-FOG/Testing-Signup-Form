@@ -1,18 +1,19 @@
-const form = document.getElementById('form');
-const firstname = document.getElementById('firstname');
+const form = document.getElementById('form');          //get form id
+//get id of each form name
+const firstname = document.getElementById('firstname'); 
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-
+//add event listener
 form.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    checkInputs();
+    e.preventDefault();                 //this line prevents empty forms from being submitted
+    
+    checkInputs();            //this line makes a call to the checkInputs function
 })
 
-
+//create a function for the form validation
 function checkInputs() {
     //GET VALUES FROM INPUTS
    const firstnameValue = firstname.value.trim();
@@ -24,15 +25,15 @@ function checkInputs() {
     if(firstnameValue === ''){
         //SHOW AN ERROR
         //ADD ERROR MESSAGE
-        setErrorFor(firstname, 'firstname cannot be blank');
+        setErrorFor(firstname, 'firstname cannot be blank');    //this makes a call to the setErrorFor function for error
 
-    } else if(!isLetter(firstnameValue)) {
+    } else if(!isLetter(firstnameValue)) {                     //this tests the form values based on the isLetter function
 
         setErrorFor(firstname, 'firstname cannot be a number');
    
     } else {
         //ADD SUCCESS MESSAGE
-        setSuccessFor(firstname);
+        setSuccessFor(firstname);                        //if there is no error, call setSuccessfor function
     }
 
 
@@ -92,25 +93,29 @@ function checkInputs() {
     }
 }
 
+//create the function to call for errors
 function setErrorFor(input, message){
-    const formGroup = input.parentElement; // THE FORM GROUP CLASS
-    const small =formGroup.querySelector('small');
+    const formGroup = input.parentElement;
+    const small =formGroup.querySelector('small');   //this makes a query to the css
 
     //ADD ERROR MESSASEGE
     small.innerText = message;
-
-    //ADD ERROR CLASS
+    
     formGroup.className = 'form-group error';
 
 }
 
+//create the function to call for success
 function setSuccessFor(input) {
     const formGroup = input.parentElement;
 
-        //ADD ERROR CLASS
+        //ADD Success
     formGroup.className = 'form-group success';
 }
 
+/*create the funtions used in the checkInputs function to check form values
+  I created tests on these functions to test them in the sign_up test folder
+*/
 function isLetter(firstname){
     return /^[a-zA-Z]+$/.test(firstname);
 }
