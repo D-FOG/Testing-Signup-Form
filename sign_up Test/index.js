@@ -1,5 +1,7 @@
-module.exports = {
-    isLetter: function(){
+//export functions
+module.exports = { 
+    //functions to export
+    isLetter: function(){  
         value = "favour";
         return value;
     },
