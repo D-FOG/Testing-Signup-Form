@@ -22,10 +22,6 @@ This is just a simple project I used created to test form validation.
 4. Run the files using `npm test`.
 5. You can also use it to create your own tests.
 
-
-To run the tests open the sign up test folder in vs code and run it. 
-use the ``` npm test ``` to run the test file.
-
 ## How to run the sign up form
 To run the sign up form, run the index.html file in the sign up folder on you browser.
 
