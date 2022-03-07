@@ -12,7 +12,7 @@ The test checks the functions;
 * isLetter
 
 which are used in the signup.js files to validate the form.
-This is just a simple project used i created to test form validation.
+This is just a simple project I used created to test form validation.
 
 
 ## Running test files
